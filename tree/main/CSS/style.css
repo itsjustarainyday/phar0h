@@ -1,0 +1,196 @@
+/* 
+Styling for Home and about
+contact - contact.css
+       ~~ last rule is applied ~~
+*/
+*{
+       /* background: black; */
+       /* border: 10px; */
+       margin: 0;
+       padding: 0pt;
+       background-image: linear-gradient(rgb(9, 119, 119) rgb(0, 170, 147));
+       scroll-behavior: smooth;
+}
+/* ^^ default settings
+
+   everything below is for block/inline adjustments
+*/
+body{
+       color: rgb(21, 214, 175);
+       align-items: center;
+       display: block;
+       background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/images/5a9a04b6-9545-48fd-88b9-f1db8a1d1d43.png);
+       background-size: cover;
+
+} 
+/* ^^^ defaults and other preliminary settings
+
+
+     all other div/blocks/adjustments
+*/
+header{
+       background: linear-gradient(rgb(3, 157, 119) , rgb(14, 82, 160));
+       height: 4rem;
+       width: 100vw;
+       position: fixed;
+       top: 0;
+       z-index: 0;
+}
+/* 
+ Nav bar and -underline block- "animations"
+
+*/
+nav{
+       display: block;
+       padding: 1% 1%;
+       justify-content: space-between;
+       align-items: center;
+       z-index: inherit;
+}
+html body header nav img{
+       height: 80px;
+       width: 80px;
+       margin: auto;
+       display: inline-block;
+}
+nav ul a {
+       color: whitesmoke;
+       text-decoration: none;
+       border: 1px yellow;
+       outline: 1px red;
+}
+nav div img{
+       width: 150px;
+}
+.nav-links{
+       flex: 1;
+       text-align: right;
+       /* background: linear-gradient(rgb(3, 157, 119) , rgb(14, 82, 160)); */
+
+}
+.nav-links ul a{
+       list-style: none;
+       display: inline-block;
+       padding: 1px 2px;
+}
+.nav-links ul a::after{
+       content: '';
+       width: 80%;
+       height: 2px;
+       background: #6c6c6c;
+       display: block;
+       margin: auto;
+       transition: 300ms;
+}
+.nav-links ul a:hover::after{
+       width: calc(100% + 2px);
+       background: #09ac83;
+}
+/* 
+text and paragraphs in the main page
+
+
+       <p> defaults
+*/
+p{
+       margin: 5px;
+}
+/* 
+overridden below; <p> <h1>
+
+*/
+#intro1{
+       font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       font-size: 1em;
+       margin: 5rem;
+       height: 8rem;
+       border-radius: 20px;
+       text-align: center;
+       display: block;
+       background-image: linear-gradient(to bottom , black , rgb(47, 43, 43));
+
+}
+#title-img{
+       background-position: center;
+}
+#headingsig{
+       background-image: linear-gradient(to bottom , black , rgb(47, 43, 43));
+       font-size: 3rem;
+       font-family: monospace;
+       font-weight: bold;
+       color: royalblue;
+       border: 2px dotted orange;
+       display: inline-block right;
+       text-align: center;
+       width: 78vw;
+       margin-top: 15rem;
+       margin-left: 20.5vw;
+       border-radius: 20px;
+}
+#headingsig img{
+       height: 170px;
+       width: 170px;
+       float: center;
+       margin-left: 40%;
+}
+.linkabout1{
+       display: block;
+       margin-top: 2%;
+}
+.headsigimg{
+       position: relative;
+       bottom: 20%;
+}
+#intro2{
+       font-size: 24px;
+       font-family: monospace;
+       background-image: linear-gradient(to right , black , gray);
+       padding-top: 50px;
+       width: 80vw;
+       margin-top: 300px;
+       border-radius: 20px;
+}
+#intro2 img{
+       height: 170px;
+       width: 170px;
+       margin:0px 30%;
+
+}
+h1{
+       /* height: 50px; */
+       /* width: 80vw; */
+       font-size: 5em;
+       color: rgb(7, 100, 177);
+       text-shadow: 0 0 3px #4e2808, 0 0 5px #000000;
+       background-image: linear-gradient(to bottom , black , rgb(47, 43, 43));
+       border-radius: 20px;
+       position: relative;
+       margin-top: 10%;
+       z-index: 1;
+}
+h1 img{
+       height: 50px;
+       width: 50px;
+       display: inline;
+}
+footer{
+       margin-left: 5%;
+       font-family: monospace;
+       font-size: 1.5em;
+       background: gray;
+}
+
+
+/* 
+       practice for development set up below
+
+*/
+h1::after{
+       content: 'h1 - title ';
+       font-size: 1rem;
+       border: orange;
+       transition: 0.1s linear;
+}
+h1:hover::after{
+       border: 2px dotted orange;
+}
